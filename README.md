@@ -10,7 +10,6 @@ streamlit==1.36.0
 ```
 
 ## Clone the Repository
-First, go to your folder.
 ```
 git clone https://github.com/ptrss/Dicoding-for-University.git
 cd Dicoding-for-University
