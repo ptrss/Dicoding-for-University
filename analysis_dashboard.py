@@ -85,7 +85,7 @@ avg_user_cas = create_avg_user_cas(df_hour)
 monthly_user = create_monthly_user(df_day)
 
 # Viz
-st.image('https://github.com/ptrss/Dicoding-for-University/blob/main/capitalbikeshare.png')
+st.image('capitalbikeshare.png')
 
 st.header('Bike Sharing Demand Analysis 🚲')
 
