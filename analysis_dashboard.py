@@ -68,8 +68,8 @@ def create_monthly_user(df):
 st.set_page_config(layout="wide")
 
 # Import Dataset
-df_hour = pd.read_csv('Bike-sharing-dataset\hour.csv')
-df_day = pd.read_csv('Bike-sharing-dataset\day.csv')
+df_hour = pd.read_csv('https://raw.githubusercontent.com/ptrss/Dicoding-for-University/main/Bike-sharing-dataset/hour.csv')
+df_day = pd.read_csv('https://raw.githubusercontent.com/ptrss/Dicoding-for-University/main/Bike-sharing-dataset/day.csv')
 df_day['dteday'] = pd.to_datetime(df_day['dteday'])
 df_hour['dteday'] = pd.to_datetime(df_hour['dteday'])
 
@@ -301,42 +301,3 @@ with col2:
     ax.tick_params(axis='y', labelsize=10)
     ax.tick_params(axis='x', labelsize=10)
     st.pyplot(fig)
-
-# with col2:
-#     st.subheader('Busy Hour in a Day')
-#     option = st.selectbox('Select Day', ['All Days', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'])
-#     # avg_hr_days
-#     fig, ax = plt.subplots(figsize=(12, 7))
-
-#     if option == 'Sunday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Sunday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Sunday', fontsize=18)
-#     elif option == 'Monday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Monday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Monday', fontsize=18)
-#     elif option == 'Tuesday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Tuesday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Tuesday', fontsize=18)
-#     elif option == 'Wednesday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Wednesday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Wednesday', fontsize=18)
-#     elif option == 'Thursday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Thursday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Thursday', fontsize=18)
-#     elif option == 'Friday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Friday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Friday', fontsize=18)
-#     elif option == 'Saturday':
-#         sns.lineplot(data=avg_hr_days[avg_hr_days['weekday'] == 'Saturday'], x='hr', y='cnt', errorbar=None, color='#1F77B4', ax=ax)
-#         ax.set_title('Saturday', fontsize=18)
-#     else:
-#         sns.lineplot(data=avg_hr_days, x='hr', y='cnt', errorbar=None, hue='weekday', ax=ax)
-#         ax.set_title('All Days', fontsize=18)
-        
-#     ax.set_xlabel(None)
-#     ax.set_ylabel('Avg Users', fontsize=12)
-#     ax.set_xticks(range(0, 24))
-#     ax.set_ylim(avg_user_season['cnt'].min() - 10, avg_user_season['cnt'].max() + 10)
-#     ax.tick_params(axis='y', labelsize=10)
-#     ax.tick_params(axis='x', labelsize=10)
-#     st.pyplot(fig)
